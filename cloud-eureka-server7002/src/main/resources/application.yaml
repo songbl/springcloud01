@@ -1,0 +1,20 @@
+server:
+  port: 7002
+eureka:
+  instance:
+    hostname: eureka7002.com
+    prefer-ip-address: true
+  client:
+    # 集群
+    #false表示不向注册中心注册自己
+    register-with-eureka: false
+    #表示是否从Eureka Server获取注册信息，默认为true(集群的时候，这样才能配合ribbon使用负载均衡,这里是注册中心，不要ribbon的，要负载均衡的是其它注册到中心的)。
+    #如果这是一个单点的 Eureka Server，不需要同步其他节点的数据，可以设为false
+    fetch-registry: false
+    #指定服务注册中心地址。类型为 HashMap，并设置有一组默认值，默认的Key为 defaultZone；默认的Value为 http://localhost:8761/eureka
+    #当前这个服务，相当于注册服务中心（不然岂不是去8761端口了）（下面是去指定服务中心）
+    service-url:
+      # 设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址
+      # 单机 defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      # 相互注册====我理解是注册中心的地址（一台机器，ip确认地址空间，端口相当于再去细颗粒分割物理空间；ip+port唯一确认）
+      defaultZone: http://eureka7001.com:7001/eureka/

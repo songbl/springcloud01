@@ -18,3 +18,6 @@ eureka:
       # 单机 defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       # 相互注册====我理解是注册中心的地址（一台机器，ip确认地址空间，端口相当于再去细颗粒分割物理空间；ip+port唯一确认）
       defaultZone: http://eureka7001.com:7001/eureka/
+  server:
+    enable-self-preservation: true  #自我保护
+    eviction-interval-timer-in-ms: 5000 # 扫描时间

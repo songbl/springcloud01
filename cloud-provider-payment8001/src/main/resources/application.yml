@@ -35,7 +35,7 @@ eureka:
     prefer-ip-address: true #访问路径可以显示ip
     #Eureka客户端向服务端发送心跳的实际间隔，单位为秒（默认为30秒）
     lease-renewal-interval-in-seconds: 30
-    #Eureka服务端收到最后一次心跳后等待时间上线，单位为秒（默认为90秒）超时将剔除服务；（客户端告诉服务端，此规则剔除自己）
+    #Eureka服务端收到最后一次心跳后等待时间上线，单位为秒（默认为90秒）超时将剔除服务；（客户端告诉服务端，此规则剔除自己），心跳+等待+扫描=剔除时间
     lease-expiration-duration-in-seconds: 90
 logging:
   level:

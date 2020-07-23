@@ -9,12 +9,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-eureka-server7002" />
         <module name="cloud-eureka-server7001" />
+        <module name="cloud-eureka-server-for-hystrix-7003" />
         <module name="cloud-api-common" />
         <module name="cloud-provider-payment8001" />
         <module name="cloud-consumer-order80" />
+        <module name="cloud-provicer-hystrix-payment8003" />
         <module name="cloud-consumer-feign-order80" />
         <module name="cloud-provider-payment8002" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-provider-hystrix-payment8003" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

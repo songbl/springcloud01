@@ -2,7 +2,7 @@ server:
   port: 8003
 spring:
   application:
-    name: cloud-provicer-hystrix-payment #相当于第三方支付功能的提供者
+    name: cloud-provider-hystrix-payment #相当于第三方支付功能的提供者CLOUD-PROVIDER-HYSTRIX-PAYMENT
 eureka:
   client:
     #false表示不向注册中心注册自己
@@ -12,4 +12,4 @@ eureka:
     fetch-registry: true
     # 设置与注册中心的交互地址
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/
+      defaultZone: http://127.0.0.1:7003/eureka/

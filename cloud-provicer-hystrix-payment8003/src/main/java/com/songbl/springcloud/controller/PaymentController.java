@@ -22,6 +22,7 @@ public class PaymentController {
 
     @GetMapping("/payment/hystrix/ok/{id}")
     public String paymentInfo_OK(@PathVariable("id") Integer id) {
+        log.error("正常方法-消费者-进入");
         String result = paymentService.paymentInfo_OK(id);
         log.info("*****result: " + result);
         return result;
@@ -33,8 +34,9 @@ public class PaymentController {
      */
     @GetMapping("/payment/hystrix/timeout/{id}")
     public String paymentInfo_Timeout(@PathVariable("id") Integer id) {
+        log.error("超时方法-消费者-进入");
         String result = paymentService.paymentInfo_Timeout(id);
-        log.info("*****result: " + result);
+        log.error("*****超时 result: " + result);
         return result;
     }
 

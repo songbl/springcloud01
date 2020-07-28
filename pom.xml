@@ -16,11 +16,13 @@
         <module>cloud-consumer-order80</module>
         <module>cloud-consumer-feign-order80</module>
         <module>cloud-eureka-server-for-hystrix-7003</module>
-        <module>cloud-provider-hystrix-payment8001</module>
         <module>cloud-provicer-hystrix-payment8003</module>
+        <module>cloud-hystrix-order-80</module>
     </modules>
     <!--  SpringCloud 的pom聚合工程-->
   <packaging>pom</packaging>
+
+<!--  牛逼格拉斯-->
 
   <name>Maven</name>
   <!-- FIXME change it to the project's website -->
